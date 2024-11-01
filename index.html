@@ -4,29 +4,72 @@
 <head>
     <title>S Revankar</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        /* Reset default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Make embedded content responsive */
+        embed {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Improve responsiveness for smaller screens */
+        @media (max-width: 600px) {
+            .w3-half {
+                width: 100%;
+            }
+            
+            embed {
+                width: 100%;
+                height: 300px;
+            }
+            
+            .w3-table {
+                font-size: 14px;
+            }
+        }
+
+        /* Fix image aspect ratio */
+        .profile-img {
+            width: 50%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 
-<body class="w3-content" style="max-width:1300px">
-
+<body>
     <!-- First Grid: Logo & About -->
     <div class="w3-row">
-        <div class="w3-half w3-black w3-container w3-center" style="height:700px">
+        <div class="w3-half w3-black w3-container w3-center" style="min-height:700px">
             <div class="w3-padding-64">
                 <h1>Shreelekha Revankar</h1>
             </div>
             <div class="w3-padding-64">
                 <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
-                <a href="#work" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Education</a>
-                <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">CV</a>
+                <a href="#education" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Education</a>
+                <a href="#cv" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">CV</a>
                 <a href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Contact</a>
             </div>
         </div>
-        <div class="w3-half w3-blue-grey w3-container" style="height:700px">
+        <div class="w3-half w3-blue-grey w3-container" style="min-height:700px">
             <div class="w3-padding-64 w3-center">
                 <h1>About Me</h1>
-                <img src="IMG-1886.jpg" class="w3-margin w3-circle" alt="Person" style="width:40%">
+                <img src="image_123650291.JPG" class="w3-margin profile-img" alt="Profile Photo">
                 <div class="w3-left-align w3-padding-large">
                     <p>I am a first-year Ph.D. student at Cornell University advised by
                         Prof. Kavita Bala and Prof. Bharath Hariharan.</p>
@@ -34,7 +77,7 @@
                         Ming Lin.</p>
                     <p>Currently I am interested in large-scale visual discovery. Overall I'm
                         interested in vision, graphics (and a little robotics).</p>
-                    <p>Outside of computer science I enjoy running and reading mystery novels.</p>
+                    <p>Outside of cs I like to run and read (fiction only plz).</p>
                 </div>
             </div>
         </div>
@@ -42,14 +85,13 @@
 
     <!-- Second Grid: Work & Resume -->
     <div class="w3-row">
-        <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
+        <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="cv">
             <div class="w3-padding-64">
                 <h2>CV</h2>
-                <embed src="file_name.pdf" width="500px" height="600px" />
+                <embed src="file_name.pdf" class="w3-margin" style="width:90%; height:600px;" />
             </div>
-
         </div>
-        <div class="w3-half w3-dark-gray w3-container" style="min-height:800px">
+        <div class="w3-half w3-dark-gray w3-container" style="min-height:800px" id="education">
             <div class="w3-padding-64 w3-center">
                 <h2>Education</h2>
                 <div class="w3-container w3-responsive">
@@ -79,16 +121,15 @@
                             <td>B.S. in Computer Science</td>
                             <td>University of Maryland, College Park</td>
                         </tr>
-
                     </table>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Third Grid: Swing By & Contact -->
+    <!-- Third Grid: Contact & Scholar -->
     <div class="w3-row" id="contact">
-        <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
+        <div class="w3-half w3-dark-grey w3-container w3-center" style="min-height:700px">
             <div class="w3-padding-64">
                 <h1>Contact</h1>
             </div>
@@ -98,27 +139,26 @@
                 <p>revankar [ a t ] cornell [.] edu</p>
             </div>
         </div>
-        <div class="w3-half w3-teal w3-container" style="height:700px">
-            <div class="w3-padding-64 w3-padding-large">
+        <div class="w3-half w3-teal w3-container" style="min-height:700px">
+            <div class="w3-padding-64 w3-center">
                 <h1>Google Scholar</h1>
-                <p class="w3-opacity">Google Scholar</p>
-                <!-- link to google scholar page and open -->
-                <a href="https://scholar.google.com/citations?user=YmSerIYAAAAJ&hl=en&oi=ao" target="_blank">Shreelekha
-                    Revankar</a>
-                <div class="w3-padding-64">
-                    <h2></h2>
-                    <embed src="https://scholar.google.com/citations?user=YmSerIYAAAAJ&hl=en&oi=ao" width="500px"
-                        height="400px" />
+                <div class="w3-padding-32">
+                    <a href="https://scholar.google.com/citations?user=YmSerIYAAAAJ&hl=en&oi=ao" 
+                       target="_blank" 
+                       class="w3-button w3-white w3-round-large">
+                        View Profile
+                    </a>
                 </div>
-
+                <div class="w3-padding-32">
+                    <h2>Recent Work</h2>
+                    <embed src="preprint.pdf" class="w3-margin" style="width:90%; height:600px;" />
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="w3-container w3-black w3-padding-16">
     </footer>
 
 </body>
-
 </html>
