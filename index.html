@@ -1,165 +1,215 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>S Revankar</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Lekha Revankar</title>
+    <meta name="author" content="Lekha Revankar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        /* Reset default margins and padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      /* Basic styles */
+      body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Layout */
+      table {
+        border: 0;
+        border-spacing: 0;
+        border-collapse: separate;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* Typography */
+      .name {
+        font-size: 32px;
+        font-weight: normal;
+        text-align: center;
+      }
+      
+      h2 {
+        font-size: 24px;
+        font-weight: normal;
+        margin-top: 30px;
+      }
+      
+      /* Links */
+      a {
+        text-decoration: none;
+        color: #1772d0;
+      }
+      
+      a:focus, a:hover {
+        color: #f09228;
+      }
+      
+      /* Profile section */
+      .profile {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      
+      .profile-content {
+        width: 63%;
+        vertical-align: middle;
+        padding: 2.5%;
+      }
+      
+      .profile-image {
+        width: 37%;
+        max-width: 37%;
+        padding: 2.5%;
+        vertical-align: middle;
+      }
+      
+      .profile-image img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 50%;
+      }
+      
+      /* Research entries */
+      .research-entry {
+        margin-bottom: 20px;
+      }
+      
+      .research-image {
+        width: 20%;
+        padding: 16px;
+        vertical-align: middle;
+      }
+      
+      .research-content {
+        width: 80%;
+        padding: 8px;
+        vertical-align: middle;
+      }
+      
+      .papertitle {
+        font-weight: bold;
+      }
+      
+      /* Responsive */
+      @media only screen and (max-width: 600px) {
+        .container {
+          padding: 10px;
         }
-
-        body {
-            min-height: 100vh;
-            overflow-x: hidden;
+        
+        .profile-content, .profile-image {
+          width: 100%;
+          max-width: 100%;
+          display: block;
         }
-
-        /* Make embedded content responsive */
-        embed {
-            max-width: 100%;
-            height: auto;
+        
+        .research-image, .research-content {
+          width: 100%;
+          display: block;
         }
-
-        /* Improve responsiveness for smaller screens */
-        @media (max-width: 600px) {
-            .w3-half {
-                width: 100%;
-            }
-            
-            embed {
-                width: 100%;
-                height: 300px;
-            }
-            
-            .w3-table {
-                font-size: 14px;
-            }
-        }
-
-        /* Fix image aspect ratio */
-        .profile-img {
-            width: 50%;
-            height: auto;
-            max-width: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <!-- First Grid: Logo & About -->
-    <div class="w3-row">
-        <div class="w3-half w3-black w3-container w3-center" style="min-height:700px">
-            <div class="w3-padding-64">
-                <h1>Shreelekha Revankar</h1>
-            </div>
-            <div class="w3-padding-64">
-                <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
-                <a href="#education" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Education</a>
-                <a href="#cv" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">CV</a>
-                <a href="#work" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Recent Works</a>
-            </div>
-        </div>
-        <div class="w3-half w3-blue-grey w3-container" style="min-height:700px">
-            <div class="w3-padding-64 w3-center">
-                <h1>About Me</h1>
-                <!-- Circle Profile Pic -->
-                <img src="image_123650291.JPG" class="w3-margin profile-img" alt="Profile Photo" />
-                <div class="w3-left-align w3-padding-large">
-                    <p>I am a first-year Ph.D. student at Cornell University advised by
-                        Prof. Kavita Bala and Prof. Bharath Hariharan.</p>
-                    <p>Previously I was a master's student at the University of Maryland, College Park, advised by Prof.
-                        Ming Lin.</p>
-                    <p>Currently I am interested in large-scale visual discovery. Overall I'm
-                        interested in vision, graphics (and a little robotics).</p>
-                    <p>Outside of cs I like to run and read (fiction only plz).</p>
-                </div>
-            </div>
-        </div>
-    </div>
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table class="profile"><tbody>
+            <tr style="padding:0px">
+              <td class="profile-content">
+                <p class="name">Lekha Revankar</p>
+                <p>I'm a 2nd year PhD student at <a href="https://www.cornell.edu">Cornell University</a>, where I work on computer vision and machine learning advised by <a href="http://home.bharathh.info/">Prof. Bharath Hariharan</a> and <a href="https://www.cs.cornell.edu/~kb/">Prof. Kavita Bala</a></p>
+                <p>Previously, I did my M.S. and B.S at the <a href="https://www.umd.edu/">University of Maryland, College Park</a> under the supervision of <a href="https://www.cs.umd.edu/~lin/">Prof. Ming Lin</a>.</p>
+                <p style="text-align:center">
+                  <a href="mailto:revankar@cs.cornell.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="resume.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=YmSerIYAAAAJ&hl">Google Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/ShreelekhaR">GitHub</a>
+                </p>
+              </td>
+              <td class="profile-image">
+                <img src="profile_pic.jpg" alt="profile photo">
+              </td>
+            </tr>
+          </tbody></table>
 
-    <!-- Second Grid: Work & Resume -->
-    <div class="w3-row">
-        <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="cv">
-            <div class="w3-padding-64">
-                <h2>CV</h2>
-                <embed src="file_name.pdf" class="w3-margin" style="width:90%; height:600px;" />
-            </div>
-        </div>
-        <div class="w3-half w3-dark-gray w3-container" style="min-height:800px" id="education">
-            <div class="w3-padding-64 w3-center">
-                <h2>Education</h2>
-                <div class="w3-container w3-responsive">
-                    <table class="w3-table">
-                        <tr>
-                            <th>Year</th>
-                            <th>Title</th>
-                            <th>Where</th>
-                        </tr>
-                        <tr class="w3-white">
-                            <td>2023-present</td>
-                            <td>Ph.D. Student in Computer Science</td>
-                            <td>Cornell University, Ithaca</td>
-                        </tr>
-                        <tr>
-                            <td>2023-2023</td>
-                            <td>Ph.D. Student in Computer Science</td>
-                            <td>University of Maryland, College Park</td>
-                        </tr>
-                        <tr class="w3-white">
-                            <td>2021-2022</td>
-                            <td>M.S. in Computer Science</td>
-                            <td>University of Maryland, College Park</td>
-                        </tr>
-                        <tr>
-                            <td>2017-2021</td>
-                            <td>B.S. in Computer Science</td>
-                            <td>University of Maryland, College Park</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>My research focuses on computer vision and machine learning for satellite imagery analysis. I work with large-scale multimodal data, developing methods to process and analyze Earth observation data. I'm particularly interested in interdisciplinary applications of these techniques, collaborating with researchers in archaeology, plant sciences, and other domains to address real-world challenges through satellite imagery analysis.</p>
+              </td>
+            </tr>
+          </tbody></table>
 
-    <!-- Third Grid: Contact & Scholar -->
-    <div class="w3-row" id="contact">
-        <div class="w3-half w3-dark-grey w3-container w3-center" style="min-height:700px">
-            <div class="w3-padding-64">
-                <h1>Contact</h1>
-            </div>
-            <div class="w3-padding-64">
-                <p>G23...for a cup of coffee, or whatever.</p>
-                <p>Ithaca, NY</p>
-                <p>revankar [ a t ] cornell [.] edu</p>
-            </div>
-        </div>
-        <div class="w3-half w3-teal w3-container" style="min-height:700px" id="work">
-            <div class="w3-padding-64 w3-center">
-                <h1>Google Scholar</h1>
-                <div class="w3-padding-32">
-                    <a href="https://scholar.google.com/citations?user=YmSerIYAAAAJ&hl=en&oi=ao" 
-                       target="_blank" 
-                       class="w3-button w3-white w3-round-large">
-                        View Profile
-                    </a>
-                </div>
-                <div class="w3-padding-32">
-                    <h2>Recent Work</h2>
-                    <embed src="preprint.pdf" class="w3-margin" style="width:90%; height:600px;" />
-                </div>
-            </div>
-        </div>
-    </div>
+          <!-- Research Entry Example -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td class="research-image">
+                <img src="square_title_figure.png" width="160">
+              </td>
+              <td class="research-content">
+                <a href="https://arxiv.org/abs/2411.00210">
+                  <span class="papertitle">Scale-Aware Recognition in Satellite Images under Resource Constraints</span>
+                </a>
+                <br>
+                Shreelekha Revankar, Cheng Perng Phoo, Utkarsh Mall, Bharath Hariharan, Kavita Bala
+                <br>
+                <em>ICLR</em>, 2025
+                <br>
+                <a href="Scale_Aware.pdf">paper</a> /
+                <a href="#">code</a> /
+                <a href="https://arxiv.org/abs/2411.00210">project page</a>
+                <p>We introduce a new approach to scale-aware recognition in satellite imagery under
+                    resource constraints. Our approach allows one to accurately detect various concepts using a fixed
+                    budget of HR imagery, outperforming entirely HR baselines by more than 26% mAP in zero-shot
+                    techniques, and more than 8% mAP in supervised techniques using 5× fewer HR images.</p>
+              </td>
+            </tr>
 
-    <footer class="w3-container w3-black w3-padding-16">
-    </footer>
+            <!-- You can add more research entries here following the same pattern -->
 
-</body>
+          </tbody></table>
+
+         <!-- News Section -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>News</h2>
+                <ul>
+                <li>[Feb 2025] Attending Vision Day</li>
+                <img src="vision_day.jpeg" height="200">
+                <li>[Jan 2025] <a href="https://arxiv.org/abs/2411.00210">Paper</a> accepted to ICLR!</li>
+                <li>[Sep 2024] Presented at Cornell AI-CLIMATE Retreat</li>
+                <img src="climate_retreat.png" height="200">
+                <li>[Sep 2023] Started PhD at Cornell</li>
+                </ul>
+            </td>
+            </tr>
+        </tbody></table>
+
+          <!-- Footer -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Website template inspired by <a href="https://jonbarron.info">Jon Barron</a>
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
+  </body>
 </html>
