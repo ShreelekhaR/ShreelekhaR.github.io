@@ -13,6 +13,8 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
+        background-color: #fffaf5;
+        color: #2d2a26;
       }
       
       /* Layout */
@@ -41,16 +43,18 @@
         font-size: 24px;
         font-weight: normal;
         margin-top: 30px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #f0e6da;
       }
       
       /* Links */
       a {
         text-decoration: none;
-        color: #1772d0;
+        color: #c05a2c;
       }
-      
+
       a:focus, a:hover {
-        color: #f09228;
+        color: #e07840;
       }
       
       /* Profile section */
@@ -99,6 +103,68 @@
         font-weight: bold;
       }
       
+      /* Dark mode toggle */
+      .theme-toggle {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        background: none;
+        border: 2px solid #e0d5c8;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 100;
+        transition: background-color 0.3s, border-color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .theme-toggle:hover {
+        background-color: #f0e6da;
+      }
+
+      /* Dark mode */
+      body.dark {
+        background-color: #1e1a16;
+        color: #e0d5c8;
+      }
+
+      body.dark a {
+        color: #e8935a;
+      }
+
+      body.dark a:focus, body.dark a:hover {
+        color: #f0b080;
+      }
+
+      body.dark h2 {
+        border-bottom-color: #3a3228;
+      }
+
+      body.dark .theme-toggle {
+        border-color: #3a3228;
+      }
+
+      body.dark .theme-toggle:hover {
+        background-color: #2a241e;
+      }
+
+      body.dark .news-img {
+        opacity: 0.9;
+      }
+
+      /* News images */
+      .news-img {
+        height: 200px;
+        max-width: 45%;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 8px 8px 4px 0;
+      }
+
       /* Responsive */
       @media only screen and (max-width: 600px) {
         .container {
@@ -120,7 +186,8 @@
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
           <table class="profile"><tbody>
@@ -131,7 +198,7 @@
                 <p>Previously, I did my M.S. and B.S at the <a href="https://www.umd.edu/">University of Maryland, College Park</a> under the supervision of <a href="https://www.cs.umd.edu/~lin/">Prof. Ming Lin</a>.</p>
                 <p>Currently I am taking a year to do research full time at <a href="https://www.planet.com/">Planet</a> in San Francisco!</p>
                 <p style="text-align:center">
-                  <a href="mailto:revankar@cs.cornell.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="#" onclick="navigator.clipboard.writeText('revankar@cs.cornell.edu'); this.textContent='Copied!'; setTimeout(() => this.textContent='Email', 1500); return false;" style="cursor:pointer;">Email</a> &nbsp;/&nbsp;
                   <a href="Revankar_Resume.pdf">Resume</a> &nbsp;/&nbsp;
                   <a href="https://scholar.google.com/citations?user=YmSerIYAAAAJ&hl">Google Scholar</a> &nbsp;/&nbsp;
                   <a href="https://github.com/ShreelekhaR">GitHub</a>
@@ -180,7 +247,7 @@
                 <br>
                 <em>NeurIPS D&amp;B</em>, 2025 <strong>Spotlight</strong>
                 <br>
-                <a href="https://arxiv.org/abs/2507.16228">paper</a> /
+                <a href="monitrs.pdf">paper</a> /
                 <a href="https://github.com/ShreelekhaR/MONITRS">code</a> /
                 <a href="https://www.cs.cornell.edu/~revankar/monitrs">project page</a>
                 <p>We introduce MONITRS, pairing temporal satellite imagery of ~10,000 natural disasters with natural language descriptions from news articles. Fine-tuned models achieve 88.69% accuracy in disaster classification, outperforming state-of-the-art remote sensing models by over 38%, establishing a new benchmark for automated disaster monitoring.</p>
@@ -224,20 +291,24 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>News</h2>
                 <ul>
-                <li>[Sept 2025] <a href="https://arxiv.org/pdf/2507.16228?">MONITRS</a> accepted to NeurIPS d&b as <em>Spotlight</em>!</li>
+                <li>[Dec 2025] Presented <a href="monitrs.pdf">MONITRS</a> at NeurIPS and got to run with fellow researchers :)</li>
+                <br><img src="assets/pics/neurips_monitrs_poster.jpg" class="news-img"><img src="assets/pics/neurips_run.jpg" class="news-img">
+                <li>[Oct 2025] Featured in Google Research &amp; Google Cloud videos on satellite imagery research!</li>
+                <br><img src="assets/pics/google_research_video.png" class="news-img">
+                <li>[Sept 2025] <a href="monitrs.pdf">MONITRS</a> accepted to NeurIPS D&amp;B as <em>Spotlight</em>!</li>
                 <li>[Aug 2025] Accepted a full time 1 year position @ <a href="https://www.planet.com/">Planet</a> as AI/ML Researcher!</li>
-                <li>[June 2025] Attend <a href="https://events.ycombinator.com/ai-sus">YC AI Start Up School</a> and saw so many familiar faces!</li>
-                <img src="assets/pics/aisus.jpg" height="200">
+                <li>[June 2025] Attended <a href="https://events.ycombinator.com/ai-sus">YC AI Start Up School</a> and saw so many familiar faces!</li>
+                <br><img src="assets/pics/aisus.jpg" class="news-img">
                 <li>[May 2025] Began Internship @ <a href="https://www.planet.com/">Planet</a> as an AI/ML Research Intern</li>
                 <li>[April 2025] Presented <a href="https://arxiv.org/abs/2411.00210">Scale-Aware</a> work  @ ICLR</li>
-                <img src="assets/pics/scale_aware_iclr1.jpg" height="200"><img src="assets/pics/scale_aware_iclr2.jpg" height="200">
-                <li>[April 2025] Invited Talk @ Ithaca High School's FIRST Robotics club</li>
+                <br><img src="assets/pics/scale_aware_iclr1.jpg" class="news-img"><img src="assets/pics/scale_aware_iclr2.jpg" class="news-img">
+                <li>[April 2025] Invited Talk on Satellite Research @ Ithaca High School</li>
                 <li>[Feb 2025] Updated Project Page for <a href="https://www.cs.cornell.edu/~revankar/scale_aware">Scale-Aware Paper</a></li>
                 <li>[Feb 2025] Attending Vision Day</li>
-                <img src="assets/pics/vision_day.jpeg" height="200">
+                <br><img src="assets/pics/vision_day.jpeg" class="news-img">
                 <li>[Jan 2025] <a href="https://arxiv.org/abs/2411.00210">Paper</a> accepted to ICLR!</li>
                 <li>[Sep 2024] Presented at Cornell AI-CLIMATE Retreat</li>
-                <img src="assets/pics/climate_retreat.png" height="200">
+                <br><img src="assets/pics/climate_retreat.png" class="news-img">
                 <li>[Sep 2023] Started PhD at Cornell</li>
                 </ul>
             </td>
@@ -258,5 +329,24 @@
         </td>
       </tr>
     </tbody></table>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" id="themeBtn"></button>
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark');
+        var isDark = document.body.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        document.getElementById('themeBtn').textContent = isDark ? '\u2600\uFE0F' : '\uD83C\uDF19';
+      }
+      (function() {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.body.classList.add('dark');
+          document.getElementById('themeBtn').textContent = '\u2600\uFE0F';
+        } else {
+          document.getElementById('themeBtn').textContent = '\uD83C\uDF19';
+        }
+      })();
+    </script>
   </body>
 </html>
